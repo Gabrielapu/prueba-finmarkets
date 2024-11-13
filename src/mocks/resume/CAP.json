@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "code": 200,
+  "data": {
+    "info": {
+      "name": "CAP S.A.",
+      "shortName": "CAP",
+      "countryName": "Chile",
+      "currencyName": "Peso Chileno",
+      "currencySymbol": "$",
+      "codeInstrument": "CAP",
+      "marketName": "Bolsa de Santiago",
+      "hourOpen": "09:30:00",
+      "hourClose": "16:00:00",
+      "trading": true,
+      "exchangeRate": 1
+    },
+    "price": {
+      "lastPrice": 5740,
+      "datetimeLastPrice": "06-11-2024 14:10:40",
+      "openPrice": 5669,
+      "closePrice": 5700,
+      "datetimeClosePrice": "05-11-2024 16:02:02",
+      "performanceAbsolute": 40,
+      "performanceRelative": 0.701754,
+      "bid": 5721.1,
+      "bidVolume": 91,
+      "bidDatetime": "2024-11-06 14:26:50",
+      "ask": 5740,
+      "askVolume": 216,
+      "askDatetime": "2024-11-06 14:11:57",
+      "volumeMoney": 843780,
+      "accumulatedVolumeMoney": 587229411,
+      "volumeInstrument": 147,
+      "accumulatedVolumeInstrument": 103680,
+      "tend": "up",
+      "maxDay": 5750,
+      "minDay": 5600,
+      "min52W": 4850,
+      "max52W": 7750,
+      "pct30D": -6.209150326797386,
+      "pctRelW52": 8.865884869551932,
+      "pctRelCY": -20.833333333333336
+    }
+  }
+}

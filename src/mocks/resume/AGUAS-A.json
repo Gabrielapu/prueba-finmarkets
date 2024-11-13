@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "code": 200,
+  "data": {
+    "info": {
+      "name": "AGUAS ANDINAS S.A., SERIE A",
+      "shortName": "AGUAS-A",
+      "countryName": "Chile",
+      "currencyName": "Peso Chileno",
+      "currencySymbol": "$",
+      "codeInstrument": "AGUAS-A",
+      "marketName": "Bolsa de Santiago",
+      "hourOpen": "09:30:00",
+      "hourClose": "16:00:00",
+      "trading": true,
+      "exchangeRate": 1
+    },
+    "price": {
+      "lastPrice": 272,
+      "datetimeLastPrice": "06-11-2024 12:51:29",
+      "openPrice": 275,
+      "closePrice": 272,
+      "datetimeClosePrice": "05-11-2024 16:02:02",
+      "performanceAbsolute": 0,
+      "performanceRelative": 0,
+      "bid": 272,
+      "bidVolume": 27718,
+      "bidDatetime": "2024-11-06 12:48:10",
+      "ask": 273.2,
+      "askVolume": 11725,
+      "askDatetime": "2024-11-06 12:51:32",
+      "volumeMoney": 795328,
+      "accumulatedVolumeMoney": 195762557,
+      "volumeInstrument": 2924,
+      "accumulatedVolumeInstrument": 718885,
+      "tend": "same",
+      "maxDay": 275,
+      "minDay": 272,
+      "min52W": 253,
+      "max52W": 294,
+      "pct30D": 0.7407407407407307,
+      "pctRelW52": 1.5152646114801938,
+      "pctRelCY": -4.427266338721014
+    }
+  }
+}

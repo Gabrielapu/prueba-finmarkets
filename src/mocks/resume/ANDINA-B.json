@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "code": 200,
+  "data": {
+    "info": {
+      "name": "EMBOTELLADORA ANDINA S.A. SERIE B",
+      "shortName": "ANDINA-B",
+      "countryName": "Chile",
+      "currencyName": "Peso Chileno",
+      "currencySymbol": "$",
+      "codeInstrument": "ANDINA-B",
+      "marketName": "Bolsa de Santiago",
+      "hourOpen": "09:30:00",
+      "hourClose": "16:00:00",
+      "trading": true,
+      "exchangeRate": 1
+    },
+    "price": {
+      "lastPrice": 2800,
+      "datetimeLastPrice": "06-11-2024 12:53:24",
+      "openPrice": 2814,
+      "closePrice": 2814.9,
+      "datetimeClosePrice": "05-11-2024 16:02:02",
+      "performanceAbsolute": -14.9,
+      "performanceRelative": -0.529326,
+      "bid": 2790.6,
+      "bidVolume": 545,
+      "bidDatetime": "2024-11-06 12:53:24",
+      "ask": 2800,
+      "askVolume": 487,
+      "askDatetime": "2024-11-06 12:53:09",
+      "volumeMoney": 1680000,
+      "accumulatedVolumeMoney": 507969624,
+      "volumeInstrument": 600,
+      "accumulatedVolumeInstrument": 182598,
+      "tend": "down",
+      "maxDay": 2835,
+      "minDay": 2785,
+      "min52W": 1939.9,
+      "max52W": 3100,
+      "pct30D": -4.761904761904767,
+      "pctRelW52": 45.097938144329895,
+      "pctRelCY": 28.534246575342472
+    }
+  }
+}

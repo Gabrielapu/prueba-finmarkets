@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "code": 200,
+  "data": {
+    "info": {
+      "name": "BANCO DE CREDITO E INVERSIONES",
+      "shortName": "BCI",
+      "countryName": "Chile",
+      "currencyName": "Peso Chileno",
+      "currencySymbol": "$",
+      "codeInstrument": "BCI",
+      "marketName": "Bolsa de Santiago",
+      "hourOpen": "09:30:00",
+      "hourClose": "16:00:00",
+      "trading": true,
+      "exchangeRate": 1
+    },
+    "price": {
+      "lastPrice": 28554,
+      "datetimeLastPrice": "06-11-2024 14:17:40",
+      "openPrice": 28399,
+      "closePrice": 28300,
+      "datetimeClosePrice": "05-11-2024 16:02:02",
+      "performanceAbsolute": 254,
+      "performanceRelative": 0.897527,
+      "bid": 28357,
+      "bidVolume": 200,
+      "bidDatetime": "2024-11-06 14:24:01",
+      "ask": 28783,
+      "askVolume": 200,
+      "askDatetime": "2024-11-06 14:24:02",
+      "volumeMoney": 3397926,
+      "accumulatedVolumeMoney": 2611255885,
+      "volumeInstrument": 119,
+      "accumulatedVolumeInstrument": 92320,
+      "tend": "up",
+      "maxDay": 28800,
+      "minDay": 28109,
+      "min52W": 21600,
+      "max52W": 29285,
+      "pct30D": 3.8327272727272765,
+      "pctRelW52": 25.77777777777779,
+      "pctRelCY": 18.65828092243187
+    }
+  }
+}

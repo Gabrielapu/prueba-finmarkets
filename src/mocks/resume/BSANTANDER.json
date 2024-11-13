@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "code": 200,
+  "data": {
+    "info": {
+      "name": "BANCO SANTANDER-CHILE",
+      "shortName": "BSANTANDER",
+      "countryName": "Chile",
+      "currencyName": "Peso Chileno",
+      "currencySymbol": "$",
+      "codeInstrument": "BSANTANDER",
+      "marketName": "Bolsa de Santiago",
+      "hourOpen": "09:30:00",
+      "hourClose": "16:00:00",
+      "trading": true,
+      "exchangeRate": 1
+    },
+    "price": {
+      "lastPrice": 47.27,
+      "datetimeLastPrice": "06-11-2024 14:21:21",
+      "openPrice": 47.11,
+      "closePrice": 47.11,
+      "datetimeClosePrice": "05-11-2024 16:02:02",
+      "performanceAbsolute": 0.16,
+      "performanceRelative": 0.339631,
+      "bid": 47.26,
+      "bidVolume": 323721,
+      "bidDatetime": "2024-11-06 14:26:11",
+      "ask": 47.8,
+      "askVolume": 100000,
+      "askDatetime": "2024-11-06 14:24:50",
+      "volumeMoney": 1306543,
+      "accumulatedVolumeMoney": 1990718782,
+      "volumeInstrument": 27640,
+      "accumulatedVolumeInstrument": 42353183,
+      "tend": "up",
+      "maxDay": 47.79,
+      "minDay": 46.37,
+      "min52W": 40.2,
+      "max52W": 49.9,
+      "pct30D": 4.256726951918832,
+      "pctRelW52": 16.063069721606293,
+      "pctRelCY": 9.558139534883715
+    }
+  }
+}

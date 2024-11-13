@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "code": 200,
+  "data": {
+    "info": {
+      "name": "IPSA",
+      "shortName": "IPSA",
+      "countryName": "Chile",
+      "currencyName": "Universal",
+      "currencySymbol": "$$$",
+      "codeInstrument": "IPSA",
+      "marketName": "Bolsa de Santiago",
+      "hourOpen": "09:30:00",
+      "hourClose": "16:00:00",
+      "trading": true,
+      "exchangeRate": 1
+    },
+    "price": {
+      "lastPrice": 6510.08,
+      "datetimeLastPrice": "06-11-2024 12:52:07",
+      "openPrice": 6525.38,
+      "closePrice": 6525.38,
+      "datetimeClosePrice": "05-11-2024 17:16:54",
+      "performanceAbsolute": -15.3,
+      "performanceRelative": -0.234469,
+      "bid": 0,
+      "bidVolume": 0,
+      "bidDatetime": "2024-11-06 12:52:07",
+      "ask": 0,
+      "askVolume": 0,
+      "askDatetime": "2024-11-06 12:52:07",
+      "volumeMoney": 0,
+      "accumulatedVolumeMoney": 0,
+      "volumeInstrument": 0,
+      "accumulatedVolumeInstrument": 0,
+      "tend": "down",
+      "maxDay": 6525.38,
+      "minDay": 6469.32,
+      "min52W": 5559.23,
+      "max52W": 6838.39,
+      "pct30D": 0.5394469626186282,
+      "pctRelW52": 16.098189329552003,
+      "pctRelCY": 5.285933488980699
+    }
+  }
+}
