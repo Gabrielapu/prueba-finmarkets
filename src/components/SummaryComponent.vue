@@ -1,7 +1,7 @@
 
 <template>
-  <h5>Resumen</h5>
-  <hr class="uk-margin-samll">
+  <h5 class="text-center">Resumen</h5>
+  <hr class="uk-margin-small">
   <div class="uk-flex uk-flex-between">
     <span>Cotización</span>
     <b>{{ selectedInstrument.datetimeLastPrice }}</b>
