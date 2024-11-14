@@ -85,6 +85,9 @@ const chartOptions = ref({
   plugins: {
     legend: {
       display: false
+    },
+    filler: {
+      propagate: true,
     }
   }
 })
@@ -115,7 +118,7 @@ function getLabels() {
   const filteredData = chartData.value?.chart?.filter(item => 
     currentTimestamp - item.datetimeLastPriceTs <= monthCondition
   );
-  const tsDates = filteredData.map(i => i.datetimeLastPriceTs)
+  const tsDates = filteredData?.map(i => i.datetimeLastPriceTs)
   const dates = tsDates?.map(ts => {
     const d = new Date(ts * 1000)
     const year = d.getFullYear();

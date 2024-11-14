@@ -1,6 +1,6 @@
 <template>
   <div class="uk-margin-large-right">
-    <h4>{{ selectedInstrument?.name || 'Seleccione un instrumento' }}</h4>
+    <h4><b>{{ selectedInstrument?.name || 'Seleccione un instrumento' }}</b></h4>
     <span>Indice</span>
     <hr class="uk-margin-small">
     <p class="uk-margin-small" v-if="selectedInstrument">
