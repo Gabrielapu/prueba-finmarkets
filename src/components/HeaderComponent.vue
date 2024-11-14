@@ -1,5 +1,5 @@
 <template>
-  <div class="uk-margin-large-right">
+  <div class="uk-margin-right">
     <h4><b>{{ selectedInstrument?.name || 'Seleccione un instrumento' }}</b></h4>
     <span>Indice</span>
     <hr class="uk-margin-small">

@@ -9,17 +9,17 @@
     </li>
   </ul>
   <div v-if="selectedTab === 0" class="uk-flex">
-    <InstrumentListComponent tablePlace="first"  class="uk-margin-right" />
+    <InstrumentListComponent tablePlace="first"   />
     <InstrumentListComponent tablePlace="second"/>
   </div>
   <div v-else>
-    Tab sin registros segun Json de prueba
+    Tab sin registros segun JSON de prueba
   </div>
 </template>
 
 <script setup>
-import InstrumentListComponent from './InstrumentListComponent.vue';
 import { ref } from 'vue';
+import InstrumentListComponent from './InstrumentListComponent.vue';
 
 const selectedTab = ref(0);
 const tabs = ['IPSA', 'IGPA', 'NASDAQ', 'DOW JONES', 'SP/BVL']

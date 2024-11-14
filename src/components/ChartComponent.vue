@@ -1,24 +1,26 @@
 <template>
   <div class="chart-wrapper">
-    <Line
-      ref="chartRef"
-      :data="data"
-      :options="chartOptions"
-    />
+    <div class="chart">
+      <Line
+        ref="chartRef"
+        :data="data"
+        :options="chartOptions"
+      />
+    </div>
+    <div class="uk-button-group uk-margin-top uk-margin-bottom uk-margin-left">
+      <button class="uk-button uk-button-small" :class="getBtnClass('1M')" @click="range = '1M'">
+        1M
+      </button>
+      <button class="uk-button uk-button-small" :class="getBtnClass('3M')" @click="range = '3M'">
+        3M
+      </button>
+      <button class="uk-button uk-button-small" :class="getBtnClass('6M')" @click="range = '6M'">
+        6M
+      </button>
+      <button class="uk-button uk-button-small" :class="getBtnClass('1A')" @click="range = '1A'">
+        1A
+      </button>
   </div>
-  <div class="uk-button-group uk-margin-top uk-margin-bottom">
-    <button class="uk-button uk-button-small" :class="getBtnClass('1M')" @click="range = '1M'">
-      1M
-    </button>
-    <button class="uk-button uk-button-small" :class="getBtnClass('3M')" @click="range = '3M'">
-      3M
-    </button>
-    <button class="uk-button uk-button-small" :class="getBtnClass('6M')" @click="range = '6M'">
-      6M
-    </button>
-    <button class="uk-button uk-button-small" :class="getBtnClass('1A')" @click="range = '1A'">
-      1A
-    </button>
 </div>
 </template>
 
@@ -134,8 +136,16 @@ function getLabels() {
 </script>
 
 <style scoped>
-.chart-wrapper {
+.chart {
   height: 220px; 
   margin-right: 20px;
+}
+.chart-wrapper {
+  padding: 10px;
+  margin-right: 15px;
+  background-color: #f8f8f8;
+  border: 0.5px solid rgb(235, 235, 235);
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 </style>

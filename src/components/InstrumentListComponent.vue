@@ -1,5 +1,5 @@
 <template>
-  <table class="uk-table uk-table-small">
+  <table class="table-wrapper uk-table uk-table-small">
     <thead>
       <tr class="border-bottom">
         <th>Nombre</th>
@@ -80,5 +80,10 @@ th {
 }
 .uk-table {
   margin-top: 0px;
+}
+.table-wrapper {
+  border: 0.5px solid rgb(235, 235, 235);
+  border-radius: 5px;
+  background-color: #f8f8f8;
 }
 </style>

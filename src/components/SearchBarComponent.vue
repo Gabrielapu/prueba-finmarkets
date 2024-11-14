@@ -4,7 +4,9 @@
     <input
       type="text"
       v-model="searchQuery"
-      placeholder="Busca un instrumento"
+      :placeholder=" selectedInstrument 
+        ? selectedInstrument.codeInstrument 
+        : 'Busca un instrumento'"
       @focus="showDropdown = true"
       class="uk-input uk-width-expand"
     />
@@ -26,6 +28,7 @@
 <script setup>
 import { computed, ref } from 'vue';
 import { useInstrumentStore } from '../stores/instrument.js';
+
 const store = useInstrumentStore();
 const searchQuery = ref('');
 let showDropdown = ref(false);
@@ -34,13 +37,16 @@ const instrumentList = computed(() => {
   return store.instruments.map(i => i.codeInstrument);
 })
 
+const selectedInstrument = computed(() => {
+  return store.selectedInstrument
+})
+
 const setNewInstrument = (instrument) => {
   showDropdown.value = false
   const selectedInstrument = store.instruments
     .find(i => i.codeInstrument === instrument);
   store.selectInstrument(selectedInstrument);
 }
-
 
 const filteredOptions = computed(() => {
   return instrumentList.value.filter((option) => {
@@ -51,9 +57,6 @@ const filteredOptions = computed(() => {
 </script>
 
 <style scoped>
-.uk-select {
-  padding: 0px 40px;
-}
 .dropdown {
   position: relative;
   display: inline-block;
