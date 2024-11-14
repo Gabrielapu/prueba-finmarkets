@@ -4,10 +4,14 @@
     <div class="uk-flex">
       <div class="uk-width-3-4">
         <HeaderComponent />
+        <ChartComponent />
       </div>
       <div class="uk-width-1-4">
         <SummaryComponent/>
       </div>
+    </div>
+    <div class="uk-width-expand">
+      <TabComponent />
     </div>
   </div>
 </template>

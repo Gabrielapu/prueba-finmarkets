@@ -3,14 +3,24 @@
     <li 
       v-for="tab, index in tabs" 
       :key="index"
+      @click="selectedTab = index"
     >
-      <a href="#">{{ tab.name }}</a>
+      <a href="#">{{ tab }}</a>
     </li>
   </ul>
+  <div v-if="selectedTab === 0" class="uk-flex">
+    <InstrumentListComponent tablePlace="first"  class="uk-margin-right" />
+    <InstrumentListComponent tablePlace="second"/>
+  </div>
+  <div v-else>
+    Tab sin registros segun Json de prueba
+  </div>
 </template>
 
 <script setup>
-const props = defineProps({
-  tabs: Array
-})
+import InstrumentListComponent from './InstrumentListComponent.vue';
+import { ref } from 'vue';
+
+const selectedTab = ref(0);
+const tabs = ['IPSA', 'IGPA', 'NASDAQ', 'DOW JONES', 'SP/BVL']
 </script>
