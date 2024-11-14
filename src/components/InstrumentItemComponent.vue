@@ -9,7 +9,7 @@
     <td>
       {{ useThousandSeparator(instrument.accumulatedVolumeMoney) }}
     </td>
-    <td class="text-right">
+    <td>
       <b :class="getVariationClass(instrument.pctDay)"> 
         {{ instrument.pctDay.toFixed(2) }}% 
       </b>

@@ -70,7 +70,7 @@ const selectInstrument = (instrument) => {
 
 <style scoped>
 .uk-table-small {
-  font-size: 12px;
+  font-size: 10px;
 }
 .border-bottom {
   border-bottom: 0.5px solid rgb(235, 235, 235);

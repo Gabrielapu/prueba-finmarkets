@@ -1,6 +1,6 @@
 
 <template>
-  <h5 class="text-center">Resumen</h5>
+  <h4 class="text-center title">Resumen</h4>
   <hr class="uk-margin-small">
   <div class="uk-flex uk-flex-between">
     <span>Cotización</span>
@@ -80,3 +80,9 @@ const getVariationClass = (variation) => {
   }
 }
 </script>
+
+<style scoped>
+.title {
+  margin-bottom: 0;
+}
+</style>

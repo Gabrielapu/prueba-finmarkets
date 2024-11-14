@@ -6,6 +6,20 @@
       :options="chartOptions"
     />
   </div>
+  <div class="uk-button-group uk-margin-top uk-margin-bottom">
+    <button class="uk-button uk-button-small" :class="getBtnClass('1M')" @click="range = '1M'">
+      1M
+    </button>
+    <button class="uk-button uk-button-small" :class="getBtnClass('3M')" @click="range = '3M'">
+      3M
+    </button>
+    <button class="uk-button uk-button-small" :class="getBtnClass('6M')" @click="range = '6M'">
+      6M
+    </button>
+    <button class="uk-button uk-button-small" :class="getBtnClass('1A')" @click="range = '1A'">
+      1A
+    </button>
+</div>
 </template>
 
 <script setup>
@@ -36,11 +50,20 @@ ChartJS.register(
 const store = useInstrumentStore();
 const chartData = computed(() => store.chartData?.data);
 const chartRef = ref(null);
-const ranges = {
-  '1M': 30,
-  '3M': 90,
-  '6M': 180,
-  '1A': 365
+const range = ref('1M');
+const months = {
+  1: 'Enero',
+  2: 'Febrero',
+  3: 'Marzo',
+  4: 'Abril',
+  5: 'Mayo',
+  6: 'Junio',
+  7: 'Julio',
+  8: 'Agosto',
+  9: 'Septiembre',
+  10: 'Octubre',
+  11: 'Noviembre',
+  12: 'Diciembre'
 }
 const data = computed(() => ({
   labels: getLabels(),
@@ -66,13 +89,40 @@ const chartOptions = ref({
   }
 })
 
-function getLabels(range) {
-  const tsDates = chartData.value?.chart?.map(i => i.datetimeLastPriceTs)
+const getBtnClass = (selectedRange) => {
+  if(selectedRange === range.value) {
+    return 'uk-button-primary'
+  }
+  return 'uk-button-default'
+}
+
+function getLabels() {
+  const currentTimestamp = Math.floor(Date.now() / 1000);
+  const oneMonthInSeconds = 30 * 24 * 60 * 60;
+  const threeMonthsInSeconds = 90 * 24 * 60 * 60
+  const sixMonthsInSeconds = 180 * 24 * 60 * 60
+  const oneYearInSeconds = 365 * 24 * 60 * 60
+  let monthCondition = oneMonthInSeconds;
+
+  if(range.value === '3M') {
+    monthCondition = threeMonthsInSeconds;
+  } else if(range.value === '6M') {
+    monthCondition = sixMonthsInSeconds;
+  } else if(range.value === '1A') {
+    monthCondition = oneYearInSeconds;
+  }
+
+  const filteredData = chartData.value?.chart?.filter(item => 
+    currentTimestamp - item.datetimeLastPriceTs <= monthCondition
+  );
+  const tsDates = filteredData.map(i => i.datetimeLastPriceTs)
   const dates = tsDates?.map(ts => {
     const d = new Date(ts * 1000)
     const year = d.getFullYear();
     const month = d.getMonth() + 1; 
     const day = d.getDate();
+
+    
 
     return `${day}-${month}-${year}`;
   })
@@ -82,7 +132,7 @@ function getLabels(range) {
 
 <style scoped>
 .chart-wrapper {
-  height: 250px; 
+  height: 220px; 
   margin-right: 20px;
 }
 </style>
