@@ -67,5 +67,6 @@ const getVariationClass = (variation) => {
 }
 .tr-hover:hover {
   background-color: rgb(235, 235, 235);
+  color: black;
 }
 </style>
