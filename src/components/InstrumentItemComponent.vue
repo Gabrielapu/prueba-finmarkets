@@ -1,5 +1,5 @@
 <template>
-  <tr class="table-row">
+  <tr class="table-row cursor-pointer tr-hover" @click="onClick">
     <td>
       {{ instrument.name }}
     </td>
@@ -7,7 +7,7 @@
       {{ instrument.lastPrice }}
     </td>
     <td>
-      {{ instrument.accumulatedVolumeMoney }}
+      {{ useThousandSeparator(instrument.accumulatedVolumeMoney) }}
     </td>
     <td class="text-right">
       <b :class="getVariationClass(instrument.pctDay)"> 
@@ -34,12 +34,13 @@
 
 <script setup>
 import { defineProps, defineEmits } from 'vue';
+import useThousandSeparator from '../composables/useThousandSeparator';
 
-defineProps(['instrument']);
+const props = defineProps(['instrument']);
 const emit = defineEmits(['click']);
 
 const onClick = () => {
-  emit('click', instrument);
+  emit('click', props.instrument);
 };
 
 const getVariationClass = (variation) => {
@@ -57,5 +58,14 @@ const getVariationClass = (variation) => {
 }
 .text-right {
   text-align: right;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.tr-hover {
+  transition: background-color 0.2s ease-in-out;
+}
+.tr-hover:hover {
+  background-color: rgb(235, 235, 235);
 }
 </style>

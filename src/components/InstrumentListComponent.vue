@@ -52,14 +52,13 @@ const props = defineProps({
   }
 })
 const store = useInstrumentStore();
+
 const instruments = computed(() => { 
   return props.tablePlace === 'first' ? firstHalf.value : secondHalf.value
 });
-
 const firstHalf = computed(() => {
   return store.instruments.slice(0, Math.ceil(store.instruments.length / 2));
 })
-
 const secondHalf = computed(() => {
   return store.instruments.slice(Math.ceil(store.instruments.length / 2));
 })
