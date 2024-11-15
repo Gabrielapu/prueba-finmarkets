@@ -1,5 +1,7 @@
 # Prueba Finmarkets VueJS 3
 
+Se usan las Librerias UiKit debido a que VuiKit tenia algunos componentes faltantes
+
 ## Project Setup
 
 ```sh
