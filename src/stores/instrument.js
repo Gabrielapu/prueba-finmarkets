@@ -9,12 +9,12 @@ import BSantander from '../mocks/resume/BSANTANDER.json';
 import CAP from '../mocks/resume/CAP.json';
 import IPSA from '../mocks/resume/IPSA.json';
 
-import HAguasA from '@/mocks/history/history-AGUAS-A.json';
-import HAndinaB from '@/mocks/history/history-ANDINA-B.json';
-import HBCI from '@/mocks/history/history-BCI.json';
-import HBSantander from '@/mocks/history/history-BSANTANDER.json';
-import HCAP from '@/mocks/history/history-CAP.json';
-import HIPSA from '@/mocks/history/history-IPSA.json';
+import HAguasA from '../mocks/history/history-AGUAS-A.json';
+import HAndinaB from '../mocks/history/history-ANDINA-B.json';
+import HBCI from '../mocks/history/history-BCI.json';
+import HBSantander from '../mocks/history/history-BSANTANDER.json';
+import HCAP from '../mocks/history/history-CAP.json';
+import HIPSA from '../mocks/history/history-IPSA.json';
 
 export const useInstrumentStore = defineStore('instrument', {
   state: () => ({
@@ -41,6 +41,7 @@ export const useInstrumentStore = defineStore('instrument', {
   }),
   actions: {
     selectInstrument(instrument) {
+      console.log(instrument)
       this.selectedInstrument = instrument;
       this.resumeSelectedInstrument = this.codeIntrumentDictionatyForResume[instrument.codeInstrument]; 
       this.chartData = this.codeInstrumentDictionaryForHistory[instrument.codeInstrument];

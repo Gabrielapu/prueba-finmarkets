@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest --watch"
   },
   "dependencies": {
     "chart.js": "^4.4.6",
@@ -17,8 +18,15 @@
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@pinia/testing": "^0.1.7",
     "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/test-utils": "^2.0.0-rc.18",
+    "babel-jest": "^27.4.5",
+    "jest": "^27.4.5",
     "vite": "^5.4.10",
-    "vite-plugin-vue-devtools": "^7.5.4"
+    "vite-plugin-vue-devtools": "^7.5.4",
+    "vue3-jest": "^27.0.0-alpha.1"
   }
 }

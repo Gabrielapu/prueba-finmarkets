@@ -53,32 +53,6 @@ const store = useInstrumentStore();
 const chartData = computed(() => store.chartData?.data);
 const chartRef = ref(null);
 const range = ref('1M');
-const months = {
-  1: 'Enero',
-  2: 'Febrero',
-  3: 'Marzo',
-  4: 'Abril',
-  5: 'Mayo',
-  6: 'Junio',
-  7: 'Julio',
-  8: 'Agosto',
-  9: 'Septiembre',
-  10: 'Octubre',
-  11: 'Noviembre',
-  12: 'Diciembre'
-}
-const data = computed(() => ({
-  labels: getLabels(),
-  datasets: [ 
-    {
-      data: chartData.value?.chart?.map(item => item.lastPrice),
-      fill: { below: 'red' },
-      backgroundColor: '#214d8b',
-      borderColor: '#3c86d9',
-      tension: 0.1,
-    } 
-  ]
-}));
 const chartOptions = ref({
   responsive: true,
   maintainAspectRatio: false,
@@ -93,6 +67,19 @@ const chartOptions = ref({
     }
   }
 })
+
+const data = computed(() => ({
+  labels: getLabels(),
+  datasets: [ 
+    {
+      data: chartData.value?.chart?.map(item => item.lastPrice),
+      fill: { below: 'red' },
+      backgroundColor: '#214d8b',
+      borderColor: '#3c86d9',
+      tension: 0.1,
+    } 
+  ]
+}));
 
 const getBtnClass = (selectedRange) => {
   if(selectedRange === range.value) {
@@ -126,9 +113,6 @@ function getLabels() {
     const year = d.getFullYear();
     const month = d.getMonth() + 1; 
     const day = d.getDate();
-
-    
-
     return `${day}-${month}-${year}`;
   })
   return dates

@@ -4,7 +4,7 @@
     <input
       type="text"
       v-model="searchQuery"
-      :placeholder=" selectedInstrument 
+      :placeholder="selectedInstrument 
         ? selectedInstrument.codeInstrument 
         : 'Busca un instrumento'"
       @focus="showDropdown = true"
