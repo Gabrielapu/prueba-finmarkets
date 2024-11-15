@@ -2,20 +2,20 @@
 
 Se usan las Librerias UiKit debido a que VuiKit tenia algunos componentes faltantes
 
-## Project Setup
+## Instalar dependencias
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Ejecutar el proyecto en local
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Ejecutar los test
 
 ```sh
-npm run build
+npm test
 ```
