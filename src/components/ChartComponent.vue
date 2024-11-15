@@ -80,12 +80,24 @@ const chartOptions = ref({
   maxHeight: '200px',
   plugins: {
     legend: {
-      display: false
+      display: false,
     },
     filler: {
       propagate: true,
     }
-  }
+  },
+  scales: {
+    x: {
+      ticks: {
+        color: 'white', // Change X-axis label font color
+      },
+    },
+    y: {
+      ticks: {
+        color: 'white', // Change Y-axis label font color
+      },
+    },
+  },
 })
 
 const data = computed(() => ({
@@ -94,8 +106,8 @@ const data = computed(() => ({
     {
       data: chartData.value?.chart?.map(item => item.lastPrice),
       fill: { below: 'red' },
-      backgroundColor: '#214d8b',
-      borderColor: '#3c86d9',
+      backgroundColor: '#ff0034',
+      borderColor: '#e76a41',
       tension: 0.1,
     } 
   ]
@@ -146,7 +158,6 @@ function getLabels() {
 .chart-wrapper {
   padding: 10px;
   margin-right: 15px;
-  background-color: #f8f8f8;
   border: 0.5px solid rgb(235, 235, 235);
   border-radius: 5px;
   margin-bottom: 15px;

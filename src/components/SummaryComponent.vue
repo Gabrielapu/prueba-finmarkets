@@ -101,6 +101,5 @@ const getVariationClass = (variation) => {
   padding: 10px;
   border: 0.5px solid rgb(235, 235, 235);
   border-radius: 5px;
-  background-color: #f8f8f8;
 }
 </style>

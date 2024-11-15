@@ -1,0 +1,117 @@
+/* General */
+html, body {
+  background-color: #1e1e2d; /* Fondo oscuro */
+  color: #f1f1f1; /* Texto claro */
+  height: 100%;
+}
+
+html, body .uk-margin-top,
+html, body .uk-margin-left,
+html, body .uk-margin-right,
+html, body .uk-margin-bottom {
+  color: inherit; /* Usa el color de texto principal */
+}
+
+/* Inputs y dropdowns */
+html, body .dropdown .dropdown-list {
+  background-color: #2b2b3d;
+  border: 1px solid #444; /* Borde más claro */
+}
+
+html, body .uk-input .uk-input:focus {
+  background-color: #2b2b3d !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #444 !important; /* Borde más claro */
+}
+
+html, body .uk-form-icon {
+  color: #f1f1f1;
+}
+
+/* Encabezados y subtítulos */
+html, body h4 {
+  color: #ffffff;
+}
+
+html, body span {
+  color: #bbbbbb; /* Texto secundario */
+}
+
+/* Botones */
+html, body .uk-button-primary {
+  background-color: #6e6e99;
+  color: #ffffff;
+  border: 1px solid #5a5a75;
+}
+
+html, body .uk-button-default {
+  background-color: #2b2b3d;
+  color: #cccccc;
+  border: 1px solid #444;
+}
+
+/* Tablas */
+html, body .uk-table {
+  background-color: #2b2b3d;
+  color: #f1f1f1;
+}
+
+html, body .uk-table th {
+  background-color: #3a3a4d;
+  color: #f1f1f1;
+  border-bottom: 1px solid #444;
+}
+
+html, body .uk-table td {
+  background-color: #2b2b3d;
+  color: #f1f1f1;
+  border-top: 1px solid #444;
+}
+
+html, body .table-row:hover {
+  background-color: #444; /* Fila resaltada en hover */
+}
+
+/* Gráficos y contenedores */
+html, body .chart-wrapper,
+html, body .resume-wrapper {
+  background-color: #2b2b3d;
+  border: 1px solid #444;
+}
+
+html, body .chart canvas {
+  background-color: #2b2b3d;
+}
+
+/* Líneas divisorias */
+html, body hr {
+  border-color: #444;
+}
+
+/* Textos de colores */
+html, body .uk-text-danger {
+  color: #ff6b6b; /* Rojo para valores negativos */
+}
+
+html, body .uk-text-success {
+  color: #4caf50; /* Verde para valores positivos */
+}
+
+html, body .uk-text-bold {
+  font-weight: bold;
+}
+
+/* Tab navigation */
+html, body ul[uk-tab] {
+  background-color: #2b2b3d;
+}
+
+html, body ul[uk-tab] li a {
+  color: #f1f1f1;
+}
+
+html, body ul[uk-tab] li a:hover,
+html, body ul[uk-tab] li.uk-active a {
+  color: #ffffff;
+  border-bottom: 2px solid #5a5a75; /* Resalta el tab activo */
+}

@@ -90,7 +90,6 @@ input[type="text"] {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
   border: 1px solid #ccc;
   padding: 5px 15px 5px 15px;
   max-height: 200px; 

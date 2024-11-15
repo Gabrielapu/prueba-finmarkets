@@ -1,4 +1,5 @@
-
+import './assets/styles.css'
+document.documentElement.classList.add('dark');
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
