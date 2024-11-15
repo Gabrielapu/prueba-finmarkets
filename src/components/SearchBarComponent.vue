@@ -8,6 +8,8 @@
         ? selectedInstrument.codeInstrument 
         : 'Busca un instrumento'"
       @focus="showDropdown = true"
+      @focusout="onFocusout()"
+      @keyup.escape="onEscape()"
       class="uk-input uk-width-expand"
     />
     <ul 
@@ -40,6 +42,18 @@ const instrumentList = computed(() => {
 const selectedInstrument = computed(() => {
   return store.selectedInstrument
 })
+
+const onEscape = () => {
+  showDropdown.value = false
+  searchQuery.value = ''
+}
+
+const onFocusout = () => {
+  setTimeout(() => {
+    searchQuery.value = ''
+    showDropdown.value = false
+  }, 100)
+}
 
 const setNewInstrument = (instrument) => {
   showDropdown.value = false
@@ -81,7 +95,7 @@ input[type="text"] {
   padding: 5px 15px 5px 15px;
   max-height: 200px; 
   overflow-y: scroll;
-  width: 97%;
+  width: 98%;
 }
 li {
   margin-bottom: 10px;
