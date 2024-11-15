@@ -14,7 +14,7 @@ describe('SearchBarComponent', () => {
   })
   const store = useInstrumentStore()
 
-  test('Renderiza correctamente los datos del estado',  () => {
+  test('Renderiza correctamente los datos del estado', () => {
     const input = wrapper.find('input');
     expect(input.attributes('placeholder')).toBe(store.selectedInstrument.codeInstrument)
     expect(wrapper.vm.instrumentList.length).toBeGreaterThan(0)
@@ -29,7 +29,6 @@ describe('SearchBarComponent', () => {
 
     wrapper.findAll('li').at(2).trigger('click');
     await wrapper.vm.$nextTick();
-    console.log(wrapper.html())
     expect(wrapper.vm.selectedInstrument.codeInstrument).toBe('BCI')
     expect(input.attributes('placeholder')).toBe(store.selectedInstrument.codeInstrument)
     expect(wrapper.vm.showDropdown).toBe(false)
@@ -42,5 +41,12 @@ describe('SearchBarComponent', () => {
     await wrapper.vm.$nextTick();
     const input = wrapper.find('input');
     expect(input.attributes('placeholder')).toBe(store.selectedInstrument.codeInstrument)
+  })
+
+  test('El input contiene lo escrito por el usuario', async () => {
+    const input = wrapper.find('input');
+    await input.setValue('bci');
+    expect(input.element.value).toBe('bci')
+
   })
 })

@@ -8,16 +8,36 @@
       />
     </div>
     <div class="uk-button-group uk-margin-top uk-margin-bottom uk-margin-left">
-      <button class="uk-button uk-button-small" :class="getBtnClass('1M')" @click="range = '1M'">
+      <button
+        id="onemonth-button"
+        class="uk-button uk-button-small" 
+        :class="getBtnClass('1M')" 
+        @click="range = '1M'"
+      >
         1M
       </button>
-      <button class="uk-button uk-button-small" :class="getBtnClass('3M')" @click="range = '3M'">
+      <button
+        id="threemonth-button" 
+        class="uk-button uk-button-small" 
+        :class="getBtnClass('3M')" 
+        @click="range = '3M'"
+      >
         3M
       </button>
-      <button class="uk-button uk-button-small" :class="getBtnClass('6M')" @click="range = '6M'">
+      <button
+        id="sixmonth-button"
+        class="uk-button uk-button-small"
+        :class="getBtnClass('6M')" 
+        @click="range = '6M'"
+      >
         6M
       </button>
-      <button class="uk-button uk-button-small" :class="getBtnClass('1A')" @click="range = '1A'">
+      <button
+        id="oneyear-button" 
+        class="uk-button uk-button-small" 
+        :class="getBtnClass('1A')" 
+        @click="range = '1A'"
+      >
         1A
       </button>
   </div>
@@ -25,7 +45,7 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue';
+import { ref, computed } from 'vue';
 import { useInstrumentStore } from '../stores/instrument.js';
 import {
   Chart as ChartJS,
@@ -90,24 +110,23 @@ const getBtnClass = (selectedRange) => {
 
 function getLabels() {
   const currentTimestamp = Math.floor(Date.now() / 1000);
+
   const oneMonthInSeconds = 30 * 24 * 60 * 60;
   const threeMonthsInSeconds = 90 * 24 * 60 * 60
   const sixMonthsInSeconds = 180 * 24 * 60 * 60
   const oneYearInSeconds = 365 * 24 * 60 * 60
-  let monthCondition = oneMonthInSeconds;
 
-  if(range.value === '3M') {
-    monthCondition = threeMonthsInSeconds;
-  } else if(range.value === '6M') {
-    monthCondition = sixMonthsInSeconds;
-  } else if(range.value === '1A') {
-    monthCondition = oneYearInSeconds;
+  const conditionsByRange = {
+    '1M': oneMonthInSeconds,
+    '3M': threeMonthsInSeconds,
+    '6M': sixMonthsInSeconds,
+    '1A': oneYearInSeconds
   }
 
-  const filteredData = chartData.value?.chart?.filter(item => 
-    currentTimestamp - item.datetimeLastPriceTs <= monthCondition
+  const filteredInstruments = chartData.value?.chart?.filter(item => 
+    currentTimestamp - item.datetimeLastPriceTs <= conditionsByRange[range.value]
   );
-  const tsDates = filteredData?.map(i => i.datetimeLastPriceTs)
+  const tsDates = filteredInstruments?.map(i => i.datetimeLastPriceTs)
   const dates = tsDates?.map(ts => {
     const d = new Date(ts * 1000)
     const year = d.getFullYear();
